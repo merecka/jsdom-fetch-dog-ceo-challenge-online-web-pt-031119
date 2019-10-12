@@ -18,12 +18,15 @@ function addBreeds(breeds) {
 		const new_breed = document.createElement('li')		
 		new_breed.innerText = breed
 		breed_list.appendChild(new_breed)
-		new_breed.onclick = function(){changeColor}
-		function changeColor() {
-			debugger
-			new_breed.style.color = "#0000ff"
-	}
-})
+		new_breed.addEventListener("click", function(e){
+		console.log(e.target)
+		e.target.style.color = "#0000ff"
+
+		// This is another way to do it with arrow functions
+		// new_breed.onclick = (e) => { console.log(e)
+		// e.target.style.color = "#0000ff" }
+		})
+	})
 }
 
 
